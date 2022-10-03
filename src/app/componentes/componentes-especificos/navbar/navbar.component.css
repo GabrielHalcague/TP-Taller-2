@@ -1,0 +1,12 @@
+nav{
+background-color: #000000 !important;
+
+}
+
+header{
+    background-color: gray !important;
+}
+
+.unstyle{
+    all: unset;
+}
