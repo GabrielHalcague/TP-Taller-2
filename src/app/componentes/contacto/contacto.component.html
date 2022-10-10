@@ -1,5 +1,4 @@
 <app-navbar></app-navbar>
-
 <!--Section: Contact v.2-->
 <section class="mb-4">
 
@@ -12,69 +11,27 @@
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="mail.php" method="POST">
 
-                <!--Grid row-->
-                <div class="row">
+           <form [formGroup]="formGroup">
+            <p>Nombre:
+              <input id="username" formControlName="username">
+            </p>
+            <p>Mail:
+              <input id="useremail" formControlName="useremail">
+            </p>
+            <p>Mensaje<br>
+              <textarea rows="10" cols="30" formControlName="usermensaje"></textarea>
+            </p>
+            <button (click)="onSubmit();">Confirmar</button>
+          </form>
+          <div *ngIf="datos; then thenBlock"></div>
+          <ng-template #thenBlock>   <p>Gracias {{datos}} por contactarse, nos comunicaremos en 48 hs habiles.</p>   </ng-template>
+         
 
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <label for="name" class="">Nombre completo</label>
-                            <input type="text" id="name" name="name" class="form-control">
-
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-6">
-                        <div class="md-form mb-0">
-                            <label for="email" class="">Correo electrónico</label>
-                            <input type="text" id="email" name="email" class="form-control">
-
-                        </div>
-                    </div>
-                    <!--Grid column-->
-
-                </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="md-form mb-0">
-                            <label for="subject" class="">Asunto</label>
-                            <input type="text" id="subject" name="subject" class="form-control">
-
-                        </div>
-                    </div>
-                </div>
-                <!--Grid row-->
-
-                <!--Grid row-->
-                <div class="row">
-
-                    <!--Grid column-->
-                    <div class="col-md-12">
-
-                        <div class="md-form">
-                            <label for="message">Mensaje</label>
-                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-
-                        </div>
-
-                    </div>
-                </div>
-                <!--Grid row-->
-
-            </form>
-
-            <div class="text-center text-md-left">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Consultar</a>
-            </div>
-            <div class="status"></div>
         </div>
+
+
+        
         <!--Grid column-->
 
         <!--Grid column-->
