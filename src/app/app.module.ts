@@ -13,6 +13,7 @@ import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { CarrouselCards2Component } from './componentes/componentes-especificos/carrousel-cards2/carrousel-cards2.component';
 import { CarrouselCardsPromosComponent } from './componentes/componentes-especificos/carrousel-cards-promos/carrousel-cards-promos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductoComponent } from './componentes/componentes-especificos/producto/producto.component';
 
 
 
@@ -20,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: 'producto', component: ProductoComponent },  
 ];
 
 @NgModule({
@@ -33,6 +35,7 @@ const appRoutes: Routes = [
     ContactoComponent,
     CarrouselCards2Component,
     CarrouselCardsPromosComponent,
+    ProductoComponent,
   ],
   imports: [
     BrowserModule,
